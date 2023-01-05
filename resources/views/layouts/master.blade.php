@@ -209,7 +209,7 @@
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-hospital-user"></i>
               <p>
                 Rekam Medik
                 <span class="right badge badge-danger"></span>
@@ -218,7 +218,7 @@
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-hospital"></i>
               <p>
                 Ruang 
                 <span class="right badge badge-danger"></span>
