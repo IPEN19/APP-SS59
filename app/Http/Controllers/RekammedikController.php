@@ -13,7 +13,7 @@ class RekammedikController extends Controller
      */
     public function index()
     {
-        //
+        return view('rekammedik.index');
     }
 
     /**
