@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RekamemdikController;
+use App\Http\Controllers\RuangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::middleware('auth') ->grooup(function (){
+    //manajemen rekammedik
+    Route::get('/rekammedik', [RekamemdikController::class,'index']);
+});
