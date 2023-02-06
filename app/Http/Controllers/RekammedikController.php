@@ -13,9 +13,9 @@ class RekammedikController extends Controller
      */
     public function index()
     {
-        $nomor=1;
-        $rekammedik = Rekammedik::all();
-        return view('rekammedik.index',compact('nomor','rekammedik'));
+        // $nomor=1;
+        // $rekammedik = Rekammedik::all();
+        // return view('ruang.index',compact('nomor','rekammedik'));
     }
 
     /**
@@ -25,7 +25,7 @@ class RekammedikController extends Controller
      */
     public function create()
     {
-        return view ('rekammedik.form');
+       // return view ('ruang.form');
     }
 
     /**
@@ -36,20 +36,20 @@ class RekammedikController extends Controller
      */
     public function store(Request $request)
     {
-        $rekammedik = new Rekammedik;
+        // $rekammedik = new Rekammedik;
 
-        $rekammedik->no_rekmed = $request->kode;
-        $rekammedik->nik_pass = $request->nik;
-        $rekammedik->nm_pass = $request->nama;
-        $rekammedik->umur_pass = $request->umur;
-        $rekammedik->hp_pass = $request->hp;
-        $rekammedik->alamat_pass = $request->alamat;
-        $rekammedik->diagnosa = $request->diagnosa;
-        $rekammedik->ruangs_id = $request->id_ruang;
-        $rekammedik->foto = $request->foto;
-        $rekammedik->save();
+        // $rekammedik->no_rekmed = $request->kode;
+        // $rekammedik->nik_pass = $request->nik;
+        // $rekammedik->nm_pass = $request->nama;
+        // $rekammedik->umur_pass = $request->umur;
+        // $rekammedik->hp_pass = $request->hp;
+        // $rekammedik->alamat_pass = $request->alamat;
+        // $rekammedik->diagnosa = $request->diagnosa;
+        // $rekammedik->ruangs_id = $request->id_ruang;
+        // $rekammedik->foto = $request->foto;
+        // $rekammedik->save();
 
-        return redirect('/rekammedik');
+        // return redirect('/rekammedik');
 
     }
 
