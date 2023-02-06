@@ -25,11 +25,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::middleware('auth') ->group(function (){
-    //manajemen rekammedik
+    //manajemen ruang
     Route::get('/ruang', [RuangController::class,'index']);
     Route::get('/ruang/form', [RuangController::class,'create']);
     Route::post('/ruang', [RuangController::class,'store']);
     Route::get('/ruang/edit/{id}', [RuangController::class,'edit']);
     Route::put('/ruang/{id}', [RuangController::class,'update']);
     Route::delete('/ruang/{id}', [RuangController::class,'destroy']);
+
+    //manajemen rekammedik
+    Route::get('/rekammedik', [RekammedikController::class,'index']);
+    Route::get('/rekammedik/form', [RekammedikController::class,'create']);
+    Route::post('/rekammedik', [RekammedikController::class,'store']);
+    Route::get('/rekammedik/edit/{id}', [RekammedikController::class,'edit']);
+    Route::put('/rekammedik/{id}', [RekammedikController::class,'update']);
+    Route::delete('/rekammedik/{id}', [RekammedikController::class,'destroy']);
 });

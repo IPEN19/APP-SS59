@@ -13,9 +13,9 @@ class RekammedikController extends Controller
      */
     public function index()
     {
-        // $nomor=1;
-        // $rekammedik = Rekammedik::all();
-        // return view('ruang.index',compact('nomor','rekammedik'));
+        $nomor=1;
+        $rekammedik = Rekammedik::all();
+        return view('rekammedik.index',compact('nomor','rekammedik'));
     }
 
     /**

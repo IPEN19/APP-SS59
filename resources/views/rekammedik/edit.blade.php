@@ -28,25 +28,26 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-            <form method="POST" action="/ruang">
+            <form method="POST" action="/ruang/{{$ruang->id}}">
+                @method('PUT')
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">No.Ruang</label>
-                    <input type="text" name="ruang" class="form-control" id="exampleInputEmail1">
+                    <input type="text" name="ruang" readonly VALUE="{{$ruang->no_ruang}}" class="form-control" id="exampleInputEmail1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Nama Ruang</label>
-                    <input type="text" name="nama" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="nama"   VALUE="{{$ruang->nm_ruang}}" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jumlah Bed</label>
-                    <input type="text" name="jumlah" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="jumlah"  VALUE="{{$ruang->jumlah_bed}}" class="form-control" id="exampleInputPassword1">
                 {{-- </div>
                     <label for="exampleInputPassword1" class="form-label">Foto</label>
                     <input type="text" name="foto" class="form-control" id="exampleInputPassword1">
                 </div> --}}
                 <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Edit Data</button>
             </form>
         </div>
         </div>
