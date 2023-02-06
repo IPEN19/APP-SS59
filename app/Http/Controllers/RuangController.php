@@ -69,6 +69,7 @@ class RuangController extends Controller
     {
         $ruang = Ruang::find($id);
         return view('ruang.edit',compact('ruang'));
+        
     }
 
     /**

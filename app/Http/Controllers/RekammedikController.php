@@ -74,7 +74,8 @@ class RekammedikController extends Controller
      */
     public function edit($id)
     {
-        //
+        $rekammedik = Rekammedik::find($id);
+        return view('rekammedik.edit',compact('rekammedik'));
     }
 
     /**
