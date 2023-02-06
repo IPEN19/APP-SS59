@@ -31,4 +31,5 @@ Route::middleware('auth') ->group(function (){
     Route::post('/ruang', [RuangController::class,'store']);
     Route::get('/ruang/edit/{id}', [RuangController::class,'edit']);
     Route::put('/ruang/{id}', [RuangController::class,'update']);
+    Route::delete('/ruang/{id}', [RuangController::class,'destroy']);
 });

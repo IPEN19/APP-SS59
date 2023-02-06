@@ -99,6 +99,9 @@ class RuangController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ruang = Ruang::find($id);
+        $ruang->delete();
+
+        return redirect('/ruang');
     }
 }

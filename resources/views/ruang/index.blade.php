@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Edit Ruangan</h1>
+            <h1>Ruangan</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -48,7 +48,35 @@
                 <td>{{$item->jumlah_bed}}</td>
                 <td>
                   <a href="/ruang/edit/{{$item->id}}" class="btn btn-primary">Edit</a>
-                  <a href="" class="btn btn-danger">Hapus</a>
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">
+                    Hapus
+                  </button>
+                  {{-- modal Hapus --}}
+                  <div class="modal fade" id="modal-default{{$item->id}}">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Warning!!!! </h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Yakin Data Ruangan {{$item->nm_ruang}} Ingin Di hapus??</p>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <form action="/ruang/{{$item->id}}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-primary">Ya</button>
+                        </form>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
                 </td>
             </tr>
             @endforeach
