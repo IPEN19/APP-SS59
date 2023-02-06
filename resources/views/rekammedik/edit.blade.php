@@ -1,16 +1,16 @@
 @extends('layouts.master')
-@section('judul','ruang')
+@section('judul','Edit Rekam Medik')
 @section('content-header')
 <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Ruangan</h1>
+            <h1>Edit Rekam Medik</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Ruangan</li>
+              <li class="breadcrumb-item active">Edit Rekam Medik</li>
             </ol>
           </div>
         </div>
@@ -28,7 +28,7 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-            <form method="POST" action="/ruang/{{$ruang->id}}">
+            <form method="POST" action="/rekammedik/{{$rekammedi->id}}">
                 @method('PUT')
                 @csrf
                 <div class="mb-3">

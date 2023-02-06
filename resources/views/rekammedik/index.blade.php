@@ -51,7 +51,7 @@
                 <td>{{$item->diagnosa}}</td>
                 <td>{{$item->alamat_pass}}</td>
                 <td>{{$item->hp_pass}}</td>
-                <td>{{$item->ruangs_id}}</td>
+                <td>{{$item->Ruang->nm_ruang}}</td>
                 <td>
                   <a href="/rekammedik/edit/{{$item->id}}" class="btn btn-primary">Edit</a>
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">

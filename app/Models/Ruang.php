@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ruang extends Model
 {
-    use HasFactory;
+    public function Rekammedik()
+    {
+        return $this->belongsTo(Rekammedik::class);
+    }
 }

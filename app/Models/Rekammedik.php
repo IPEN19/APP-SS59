@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rekammedik extends Model
 {
-    use HasFactory;
+    public function Ruang()
+    {
+        return $this->hasOne(Ruang::class,"id","ruangs_id");
+    }
 }
