@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Rekammedik;
+use App\Models\Ruang;
 class RekammedikController extends Controller
 {
     /**
@@ -25,7 +26,8 @@ class RekammedikController extends Controller
      */
     public function create()
     {
-       // return view ('ruang.form');
+        $ruang = Ruang::all();
+       return view ('rekammedik.form',compact('ruang'));
     }
 
     /**
@@ -36,20 +38,20 @@ class RekammedikController extends Controller
      */
     public function store(Request $request)
     {
-        // $rekammedik = new Rekammedik;
+        $rekammedik = new Rekammedik;
 
-        // $rekammedik->no_rekmed = $request->kode;
-        // $rekammedik->nik_pass = $request->nik;
-        // $rekammedik->nm_pass = $request->nama;
-        // $rekammedik->umur_pass = $request->umur;
-        // $rekammedik->hp_pass = $request->hp;
-        // $rekammedik->alamat_pass = $request->alamat;
-        // $rekammedik->diagnosa = $request->diagnosa;
-        // $rekammedik->ruangs_id = $request->id_ruang;
-        // $rekammedik->foto = $request->foto;
-        // $rekammedik->save();
+        $rekammedik->no_rekmed = $request->norek;
+        $rekammedik->nik_pass = 123;
+        $rekammedik->nm_pass = $request->nama;
+        $rekammedik->umur_pass = "123";
+        $rekammedik->hp_pass = $request->hp;
+        $rekammedik->alamat_pass = $request->alamat;
+        $rekammedik->diagnosa = $request->diagnosa;
+        $rekammedik->ruangs_id = $request->ruang;
+        $rekammedik->foto ="default.jpg";
+        $rekammedik->save();
 
-        // return redirect('/rekammedik');
+        return redirect('/rekammedik');
 
     }
 
