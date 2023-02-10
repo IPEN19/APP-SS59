@@ -21,12 +21,12 @@
           <a href="ruang/form" class="btn btn-primary">Tambah Data</a>
 
           <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            {{-- <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
             </button>
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
               <i class="fas fa-times"></i>
-            </button>
+            </button> --}}
           </div>
         </div>
         <table class="table">
