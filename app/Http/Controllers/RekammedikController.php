@@ -75,7 +75,8 @@ class RekammedikController extends Controller
     public function edit($id)
     {
         $rekammedik = Rekammedik::find($id);
-        return view('rekammedik.edit',compact('rekammedik'));
+        $ruang = Ruang::all();
+        return view('rekammedik.edit',compact('rekammedik','ruang'));
     }
 
     /**
@@ -87,7 +88,18 @@ class RekammedikController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rekammedik =  Rekammedik::find($id);
+
+        $rekammedik->no_rekmed = $request->norek;
+        $rekammedik->nm_pass = $request->nama;
+        $rekammedik->diagnosa = $request->diagnosa;
+        $rekammedik->alamat_pass = $request->alamat;
+        $rekammedik->hp_pass = $request->hp;
+        $rekammedik->ruangs_id = $request->ruang;
+        // $ruang->foto = $request->foto;
+        $rekammedik->save();
+
+        return redirect('/rekammedik');
     }
 
     /**
@@ -98,6 +110,10 @@ class RekammedikController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+         $rekamemdik = Rekammedik::find($id);
+         $rekamemdik->delete();
+    
+        return redirect('/rekammedik');
     }
 }

@@ -50,21 +50,21 @@
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">No. Handphone</label>
                 <input type="text" name="hp" VALUE="{{$rekammedik->hp_pass}}" class="form-control" id="exampleInputPassword1">
-              {{-- </div>
+              </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Ruangan</label>
                 <select name="ruang" VALUE="{{$rekammedik->nm_ruang}}" class="form-control" id="">
                   <option value="">--Pilih Ruangan</option>
                   @foreach ($ruang as $data)
-                  <option value="{{$data->id}}">{{$data->no_ruang}} - {{$data->nm_ruang}}</option>
+                  <option value="{{$data->id}}" {{$rekammedik->ruangs_id == $data->id ? "selected" : ""}}>{{$data->no_ruang}} - {{$data->nm_ruang}}</option>
                       
                   @endforeach
                 </select>
-              </div> --}}
-                {{-- </div>
+              </div> 
+                </div>
                     <label for="exampleInputPassword1" class="form-label">Foto</label>
                     <input type="text" name="foto" class="form-control" id="exampleInputPassword1">
-                </div> --}}
+                </div>
                 <br>
                 <button type="submit" class="btn btn-primary">Edit Data</button>
             </form>
